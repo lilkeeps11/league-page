@@ -2,6 +2,60 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.3] - 2021-09-26
+
+### Fixed
+
+- Bug in matchups
+
+## [1.2.2] - 2021-09-26
+
+### Added
+
+- Added biggest blowout and narrowest victory records
+- Now caching league records for performance
+    - Cached records will load quickly and will be updated after new data is pulled in
+
+### Fixed
+
+- Loading message in blogs page read `Loading transactions` instead of `Loading blog posts`
+
+### Announcement
+
+- This will be the **real** last update for a while (*probably*)... couldn't help myself. I'm going on paternity leave! I will resume working on feature requests in November and will try to address bugs if they come up. Feel free to keep adding feature requests as they come to you though.
+
+## [1.2.1] - 2021-09-23
+
+### Fixed
+
+- Search bar bug that unfocused the input bar after every character typed
+    - If no input has been detected for 5 seconds, update query parameters in url string (updating will still unfocus the input, but (since 5 seconds have passed) the search should be complete)
+- The matchups page was always starting on week 1
+    - If no query parameter has been set, use the current week
+
+### Changed
+
+- The look of comments on blog posts
+
+### Announcement
+
+- This will be the last update for a while because I'm going on paternity leave! I will resume working on feature requests in November and will try to address bugs if they come up.
+
+## [1.2.0] - 2021-09-20
+
+### Added
+
+- Ability to view and add comments to blog posts
+- :warning: WARNING !:warning:
+    - This will break previous contentful integrations because it requires you to change the type of API key to a [Content Management API key](https://www.contentful.com/developers/docs/references/authentication/#the-content-management-api)
+    - Please refer to the [Training Wheels blog instructions](https://github.com/nmelhado/league-page/blob/master/TRAINING_WHEELS.md#iii-add-a-blog) to see how to get the new API key (and then replace the old environment variable with the new one)
+
+## [1.1.2] - 2021-09-17
+
+### Added
+
+- Add standings tab with the current season standings (customizeable rankings by changing line 12 and/or 15 in `src/lib/Standings/index.svelte`)
+
 ## [1.1.1] - 2021-09-11
 
 ### Fixed
